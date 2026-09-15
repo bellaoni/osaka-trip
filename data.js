@@ -187,7 +187,13 @@ const JAPANESE_PHRASES = [
 // ---------------- 참고정보: 쇼핑 추천 매장 (표) ----------------
 // 필드명은 다른 여행에서도 그대로 재사용 가능하도록 통일함: name/area/hours/recommend/mapQuery
 // (image 필드는 2026-07-26 결정으로 제거됨 — 매장 사진은 소싱하지 않는다. changelog 참고)
-const SHOPPING_STORES = [];
+const SHOPPING_STORES = [
+  { name: "다이마루 신사이바시점", area: "신사이바시", hours: "10:00~20:00", recommend: "닌텐도 오사카, 명품관, 식품관, 택스프리 카운터(본관 9층)", mapQuery: "다이마루 신사이바시" },
+  { name: "신사이바시 PARCO", area: "신사이바시", hours: "10:00~20:00 (지하 식당가는 ~21:00, 일부 층 상이)", recommend: "포켓몬센터, 캡콤스토어, 치이카와 굿즈 등 캐릭터샵", mapQuery: "신사이바시 파르코" },
+  { name: "돈키호테 도톤보리점", area: "도톤보리", hours: "심야까지 영업(지점별 상이, 방문 전 재확인 권장)", recommend: "과자·화장품 면세쇼핑, 7층 면세 카운터", mapQuery: "돈키호테 도톤보리점" },
+  { name: "다카시마야 오사카점", area: "난바", hours: "10:00~20:00", recommend: "일본 로컬 브랜드, 식품관, 난바 다이닝 메종(7~9층)", mapQuery: "다카시마야 오사카점" },
+  { name: "한큐백화점 우메다 본점", area: "우메다", hours: "10:00~20:00", recommend: "지하 식품관 디저트, 프리미엄 브랜드관", mapQuery: "한큐백화점 우메다 본점" },
+];
 
 // ---------------- 참고정보: 쇼핑리스트 / 꼭 먹어야 할 음식 공통 데이터 구조 ----------------
 // group: 그룹 제목(이모지 포함) / items: { title, desc(한줄 설명), mapQuery } 배열
