@@ -149,16 +149,14 @@
       <div class="book-row"><span class="k">숙소명</span><span class="v">${TRIP.hotel.name}</span></div>
       <div class="book-row"><span class="k">체크인</span><span class="v">${TRIP.hotel.checkin}</span></div>
       <div class="book-row"><span class="k">체크아웃</span><span class="v">${TRIP.hotel.checkout}</span></div>
-      <div class="book-row"><span class="k">체크인</span><span class="v">2026-08-02</span></div>
-      <div class="book-row"><span class="k">체크아웃</span><span class="v">2026-08-04</span></div>
     </div>`;
 
+    const FLIGHT_TYPE_LABEL = { outbound: "가는편", return: "오는편" };
     TRIP.flights.forEach((f) => {
-      html += `<div class="book-card"><h3>✈️ ${f.route}</h3>
-        <div class="book-row"><span class="k">날짜</span><span class="v">${f.date}</span></div>
-        <div class="book-row"><span class="k">출발</span><span class="v">${f.dep}</span></div>
-        <div class="book-row"><span class="k">도착</span><span class="v">${f.arr}</span></div>
-        <div class="book-row"><span class="k">편명</span><span class="v">${f.code}</span></div>
+      html += `<div class="book-card"><h3>✈️ ${FLIGHT_TYPE_LABEL[f.type] || ""} (${f.from} → ${f.to})</h3>
+        <div class="book-row"><span class="k">편명</span><span class="v">${f.flightNo}</span></div>
+        <div class="book-row"><span class="k">출발</span><span class="v">${f.from} ${f.depTime}</span></div>
+        <div class="book-row"><span class="k">도착</span><span class="v">${f.to} ${f.arrTime}</span></div>
       </div>`;
     });
 
