@@ -333,7 +333,7 @@
       renderShoppingList();
       openCard("shoppingCard");
     } else if (id === "ref-food-list") {
-      renderFoodList();
+      renderYakinikuGuide();
       openCard("foodCard");
     }
   }
@@ -394,9 +394,9 @@
         <td data-label="추천 상품">${s.recommend}</td>
       </tr>`).join("");
   }
-  // ---------------- 쇼핑리스트 / 꼭 먹어야 할 음식 공용 렌더러 ----------------
+  // ---------------- 쇼핑리스트 공용 렌더러 ----------------
   // groups: [{ group, items: [{ title, desc, mapQuery }] }] 형태를 그대로 렌더링.
-  // 같은 구조를 쓰기 때문에 다른 여행에서도 SHOPPING_LIST / FOOD_LIST 데이터만 바꾸면 재사용 가능.
+  // 다른 여행에서도 SHOPPING_LIST 데이터만 바꾸면 재사용 가능.
   function renderGroupedList(groups, containerId) {
     const el = document.getElementById(containerId);
     el.innerHTML = groups.map((g, gi) => `
@@ -416,7 +416,32 @@
       </ul>`).join("");
   }
   function renderShoppingList() { renderGroupedList(SHOPPING_LIST, "shoppingListBody"); }
-  function renderFoodList() { renderGroupedList(FOOD_LIST, "foodListBody"); }
+
+  // ---------------- 야끼니꾸 부위 사전 카드 (표) ----------------
+  // YAKINIKU_MEAT/HORUMON/PORK/CHICKEN(jp/kr/texture) + YAKINIKU_MODIFIERS(jp/kr/meaning)를
+  // phrase-table과 같은 표 스타일(category 행으로 구간 구분)로 한 표에 이어서 렌더링.
+  function renderYakinikuGuide() {
+    const el = document.getElementById("foodListBody");
+    const sections = [
+      { category: "🐂 소고기·우설", data: YAKINIKU_MEAT },
+      { category: "🍢 내장(호르몬)", data: YAKINIKU_HORUMON },
+      { category: "🐖 돼지고기", data: YAKINIKU_PORK },
+      { category: "🐔 닭고기", data: YAKINIKU_CHICKEN },
+    ];
+    let html = `<table class="phrase-table yakiniku-table"><tbody>`;
+    sections.forEach(s => {
+      html += `<tr class="phrase-cat"><td colspan="3">${s.category}</td></tr>`;
+      s.data.forEach(d => {
+        html += `<tr><td>${d.kr}</td><td>${d.jp}</td><td>${d.texture}</td></tr>`;
+      });
+    });
+    html += `<tr class="phrase-cat"><td colspan="3">📋 메뉴판 수식어·용어</td></tr>`;
+    YAKINIKU_MODIFIERS.forEach(m => {
+      html += `<tr><td>${m.kr}</td><td>${m.jp}</td><td>${m.meaning}</td></tr>`;
+    });
+    html += `</tbody></table>`;
+    el.innerHTML = html;
+  }
 
   // ---------------- 가계부 (나만 보기 전용) ----------------
   // 분류 로직: splitWith 인원수 > 1 → 공동경비(내 몫 = 금액/인원수)
