@@ -167,8 +167,8 @@ const ITEMS = [
   { id: "d2-7", day: 2, time: "18:30", tag: "food", title: "저녁식사 (도톤보리 또는 우메다)", desc: "식당 미정, 현지에서 즉흥 결정", mapQuery: "", remark: "시간 추정치" },
   { id: "d2-8", day: 2, time: "21:00", tag: "normal", title: "숙소 복귀", desc: "", mapQuery: "Toyoko Inn Osaka Yodoyabashi-eki Minami", remark: "예상 시간" },
 
-  { id: "d3-1", day: 3, time: "07:30", tag: "normal", title: "숙소 → USJ 이동", desc: "택시 약 20분 또는 지하철 약 40분", mapQuery: "Universal Studios Japan", remark: "08:30 오픈 전 도착 목표, 시간 추정치" },
-  { id: "d3-2", day: 3, time: "08:30", tag: "theme", title: "USJ 입장", desc: "익스프레스 패스 사용", mapQuery: "Universal Studios Japan", remark: "" },
+  { id: "d3-1", day: 3, time: "07:30", tag: "normal", title: "숙소 → USJ 이동", desc: "택시 약 20분 또는 지하철 약 40분", mapQuery: "Toyoko Inn Osaka Yodoyabashi-eki Minami", remark: "08:30 오픈 전 도착 목표, 시간 추정치" },
+  { id: "d3-2", day: 3, time: "08:30", tag: "theme", title: "USJ 입장", desc: "익스프레스 패스 사용", mapQuery: "Universal Studios Japan Main Entrance", remark: "" },
   { id: "d3-3", day: 3, time: "시간무관", tag: "theme", title: "플라잉 다이너소어", desc: "익스프레스 패스", mapQuery: "The Flying Dinosaur Universal Studios Japan", remark: "예약 시간 지정 없음" },
   { id: "d3-4", day: 3, time: "10:00", tag: "theme", title: "미니언 메이헴", desc: "익스프레스 패스, 10:00~10:30", mapQuery: "Despicable Me Minion Mayhem Universal Studios Japan", remark: "" },
   { id: "d3-5", day: 3, time: "12:20", tag: "theme", title: "슈퍼 마리오 닌텐도 월드", desc: "익스프레스 패스, 12:20~13:20", mapQuery: "Super Nintendo World Universal Studios Japan", remark: "" },
@@ -176,7 +176,7 @@ const ITEMS = [
   { id: "d3-7", day: 3, time: "12:50", tag: "theme", title: "동키콩의 크레이지 트램카", desc: "익스프레스 패스, 12:50~13:20", mapQuery: "Mine Cart Madness Universal Studios Japan", remark: "닌텐도월드 내" },
   { id: "d3-8", day: 3, time: "시간무관", tag: "theme", title: "해리포터 포비든 저니", desc: "익스프레스 패스", mapQuery: "Harry Potter and the Forbidden Journey Universal Studios Japan", remark: "예약 시간 지정 없음" },
   { id: "d3-9", day: 3, time: "18:00", tag: "theme", title: "할로윈 이벤트", desc: "저녁에 잠깐 관람 예정", mapQuery: "Universal Studios Japan", remark: "" },
-  { id: "d3-10", day: 3, time: "19:30", tag: "normal", title: "USJ 퇴장", desc: "할로윈 이벤트 관람 후 퇴장", mapQuery: "Universal Studios Japan", remark: "" },
+  { id: "d3-10", day: 3, time: "19:30", tag: "normal", title: "USJ 퇴장", desc: "할로윈 이벤트 관람 후 퇴장", mapQuery: "Universal Studios Japan Main Entrance", remark: "" },
   { id: "d3-11", day: 3, time: "20:00", tag: "food", title: "저녁식사 (우메다)", desc: "식당 미정, 현지에서 즉흥 결정", mapQuery: "Umeda", remark: "시간 추정치" },
   { id: "d3-12", day: 3, time: "21:30", tag: "normal", title: "숙소 복귀", desc: "", mapQuery: "Toyoko Inn Osaka Yodoyabashi-eki Minami", remark: "예상 시간" },
 
