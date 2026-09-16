@@ -307,10 +307,6 @@
           <li><b>${m.durationLabel}</b>: ${m.duration}</li>
           <li><b>${m.fareLabel}</b>: ${m.fare}</li>
         </ul>
-        <p class="pay-label">결제</p>
-        <ul>
-          ${m.payment.map(p => `<li>${p}</li>`).join("")}
-        </ul>
       `).join("")}
       <p class="pay-label">💡 추천</p>
       <ul>
