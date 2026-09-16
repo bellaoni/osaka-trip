@@ -290,6 +290,7 @@
 
   // ---------------- 공항↔시내 이동방법 카드 (B2: data.js TRANSIT_INFO 렌더링) ----------------
   // TRANSIT_INFO가 배열이면 왕복(가는편/오는편)으로, 단일 객체면 구버전 방식(편도)으로 렌더링.
+  // method의 payment 필드는 선택 사항(optional) — 없으면 결제수단 항목 자체가 렌더링에서 빠진다.
   function renderTransitCard() {
     const directions = Array.isArray(TRANSIT_INFO) ? TRANSIT_INFO : [TRANSIT_INFO];
     const header = document.getElementById("transitCardHeader");
@@ -307,6 +308,11 @@
           <li><b>${m.durationLabel}</b>: ${m.duration}</li>
           <li><b>${m.fareLabel}</b>: ${m.fare}</li>
         </ul>
+        ${m.payment && m.payment.length ? `
+        <p class="pay-label">결제</p>
+        <ul>
+          ${m.payment.map(p => `<li>${p}</li>`).join("")}
+        </ul>` : ""}
       `).join("")}
       <p class="pay-label">💡 추천</p>
       <ul>
