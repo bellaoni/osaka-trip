@@ -77,7 +77,39 @@ const TRANSIT_INFO = [
 // 일정 수정으로 mapQuery 문구 자체가 바뀌면, 그 새 문구는 여기 없으니 앱이 자동으로 다시 지오코딩을 시도한다.
 // 다른 여행 데이터에서도 이 구조(GEO_COORDS/GEO_SEARCH_QUERY) 그대로 복사해서 재사용 가능.
 // 신규 여행이라 확정 좌표가 아직 없음 — 장소를 추가하면서 하나씩 채워나간다.
-const GEO_COORDS = {};
+const GEO_COORDS = {
+  "Arashiyama": { lat: 35.0090473, lng: 135.6744961 },
+  "Daimaru Shinsaibashi": { lat: 34.6732574, lng: 135.5009565 },
+  "Despicable Me Minion Mayhem Universal Studios Japan": { lat: 34.6630631, lng: 135.4323736 },
+  "Dotonbori": { lat: 34.6690306, lng: 135.5015715 },
+  "Gimhae International Airport": { lat: 35.1800774, lng: 128.9364014 },
+  "Glico Man Sign": { lat: 34.668926, lng: 135.5010546 },
+  "Harry Potter and the Forbidden Journey Universal Studios Japan": { lat: 34.6681927, lng: 135.4317553 },
+  "Kansai Airport Station": { lat: 34.4359259, lng: 135.2434129 },
+  "Kansai International Airport": { lat: 34.4342045, lng: 135.222523 },
+  "Kitahama": { lat: 34.6911743, lng: 135.5065498 },
+  "Kiyomizu-dera": { lat: 34.994303, lng: 135.7844389 },
+  "Mario Kart Koopa's Challenge Universal Studios Japan": { lat: 34.668046, lng: 135.4299182 },
+  "Mine Cart Madness Universal Studios Japan": { lat: 34.66917484650562, lng: 135.43045488141541 },
+  "Namba": { lat: 34.663345, lng: 135.501876 },
+  "Nankai Namba Station": { lat: 34.66279126091599, lng: 135.50190925598145 },
+  "Nara Park": { lat: 34.6829008, lng: 135.8545975 },
+  "Nippombashi Station": { lat: 34.666718, lng: 135.5061489 },
+  "Osaka Castle": { lat: 34.6871828, lng: 135.5253958 },
+  "Shinsaibashi Station": { lat: 34.6753541, lng: 135.4992013 },
+  "Super Nintendo World Universal Studios Japan": { lat: 34.6685668, lng: 135.4301473 },
+  "The Flying Dinosaur Universal Studios Japan": { lat: 34.66456642354912, lng: 135.43045108673022 },
+  "Toyoko Inn Osaka Yodoyabashi-eki Minami": { lat: 34.688367334077256, lng: 135.5021667480469 },
+  "Tsurutontan Soemoncho": { lat: 34.66927, lng: 135.505964 },
+  "Umeda": { lat: 34.7034091, lng: 135.4975597 },
+  "Universal Studios Japan": { lat: 34.6656393, lng: 135.4324527 },
+  "Yodoyabashi": { lat: 34.6916363, lng: 135.5009259 },
+  "간사이국제공항": { lat: 34.4342045, lng: 135.222523 },
+  "김해국제공항": { lat: 35.1800774, lng: 128.9364014 },
+  "난바": { lat: 34.6661565, lng: 135.500271 },
+  "아라시야마": { lat: 35.0100353, lng: 135.6819148 },
+  "오사카성": { lat: 34.6871828, lng: 135.5253958 },
+};
 
 // 위 GEO_COORDS에 없는 곳(대부분 특정 매장·지점) 중, 한국어 mapQuery로는 OSM 검색이 잘 안 되는
 // 곳들을 위한 영문/현지어 검색어. 자동 지오코딩 시도할 때 이 문구를 우선 사용한다.
