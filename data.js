@@ -148,7 +148,7 @@ const TRIP = {
 const ITEMS = [
   { id: "d1-0", day: 1, time: "08:05", tag: "normal", title: "✈️ 김해공항 → 간사이공항 (7C1351)", desc: "08:05 출발 → 09:35 도착", mapQuery: "Gimhae International Airport", remark: "" },
   { id: "d1-1", day: 1, time: "10:35", tag: "normal", title: "간사이공항 → 난카이난바 (라피트 β56호)", desc: "3호차 23·24번, 10:35→11:12 예약완료", mapQuery: "Kansai Airport Station", remark: "" },
-  { id: "d1-2", day: 1, time: "11:12", tag: "normal", title: "난카이난바역 → 토요코인 오사카 요도야바시 스테이션 미나미", desc: "짐 맡기기", mapQuery: "Toyoko Inn Osaka Yodoyabashi-eki Minami", remark: "약 11:50 도착 예상" },
+  { id: "d1-2", day: 1, time: "11:12", tag: "normal", title: "난카이난바역 → 토요코인 오사카 요도야바시 스테이션 미나미", desc: "짐 맡기기", mapQuery: "Nankai Namba Station", remark: "약 11:50 도착 예상" },
   { id: "d1-3", day: 1, time: "12:00", tag: "food", title: "숙소 근처 점심", desc: "식당 미정, 현지에서 즉흥 결정", mapQuery: "Yodoyabashi", remark: "" },
   { id: "d1-4", day: 1, time: "13:00", tag: "food", title: "요도야바시/기타하마 카페", desc: "", mapQuery: "Kitahama", remark: "" },
   { id: "d1-5", day: 1, time: "14:30", tag: "normal", title: "숙소 체크인", desc: "", mapQuery: "Toyoko Inn Osaka Yodoyabashi-eki Minami", remark: "" },
