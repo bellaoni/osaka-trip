@@ -181,7 +181,7 @@ const ITEMS = [
   { id: "d3-12", day: 3, time: "21:30", tag: "normal", title: "숙소 복귀", desc: "", mapQuery: "Toyoko Inn Osaka Yodoyabashi-eki Minami", remark: "예상 시간" },
 
   { id: "d4-1", day: 4, time: "10:00", tag: "normal", title: "숙소 체크아웃", desc: "", mapQuery: "Toyoko Inn Osaka Yodoyabashi-eki Minami", remark: "" },
-  { id: "d4-2", day: 4, time: "10:15", tag: "normal", title: "짐 보관 (난카이난바 또는 난바역 코인라커)", desc: "정확한 위치 미정", mapQuery: "Nankai Namba Station", remark: "" },
+  { id: "d4-2", day: 4, time: "10:15", tag: "normal", title: "짐 보관 (난카이난바 또는 난바역 코인라커)", desc: "정확한 위치 미정", mapQuery: "Nankai Namba Station", remark: "n・e・s・t 난카이난바 카운터: 오사카부 오사카시 주오구 난바 5-1-60, 난카이난바역 2F 중앙개찰구 앞" },
   { id: "d4-3", day: 4, time: "10:30", tag: "sight", title: "오사카성 주변 + 요미우리TV 코난 거리", desc: "", mapQuery: "Osaka Castle", remark: "" },
   { id: "d4-4", day: 4, time: "12:30", tag: "food", title: "점심", desc: "식당 미정, 현지에서 즉흥 결정", mapQuery: "", remark: "시간 추정치" },
   { id: "d4-5", day: 4, time: "13:30", tag: "shop", title: "난바/도톤보리 쇼핑 및 시내 구경", desc: "남은 쇼핑 마무리", mapQuery: "Namba", remark: "시간 추정치" },
