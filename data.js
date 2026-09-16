@@ -102,6 +102,7 @@ const GEO_COORDS = {
   "Toyoko Inn Osaka Yodoyabashi-eki Minami": { lat: 34.688367334077256, lng: 135.5021667480469 },
   "Tsurutontan Soemoncho": { lat: 34.66927, lng: 135.505964 },
   "Umeda": { lat: 34.7034091, lng: 135.4975597 },
+  "Universal Studios Japan Main Entrance": { lat: 34.66774913166818, lng: 135.43594121932986 },
   "Universal Studios Japan": { lat: 34.6656393, lng: 135.4324527 },
   "Yodoyabashi": { lat: 34.6916363, lng: 135.5009259 },
   "간사이국제공항": { lat: 34.4342045, lng: 135.222523 },

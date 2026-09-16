@@ -759,6 +759,26 @@
     marker.addTo(mapMarkerLayers[item.day]);
   }
 
+  // 같은 mapQuery(=같은 좌표)를 쓰는 일정이 여러 개면 핀이 완전히 겹쳐서 맨 위 것 하나만
+  // 보이고 클릭도 그것만 된다. 원래 위치를 중심으로 아주 작은 원형으로 살짝씩 흩어 놓아
+  // 전부 눈에 보이고 탭할 수 있게 한다(항목이 1개뿐이면 원래 좌표 그대로 사용).
+  const PIN_SPREAD_DEG = 0.00006; // 위도 기준 약 6~7m
+  function addMarkersWithSpread(items, coords) {
+    if (items.length <= 1) {
+      items.forEach((item) => addMarkerForItem(item, coords));
+      return;
+    }
+    const latRad = (coords.lat * Math.PI) / 180;
+    items.forEach((item, idx) => {
+      const angle = (2 * Math.PI * idx) / items.length;
+      const spread = {
+        lat: coords.lat + PIN_SPREAD_DEG * Math.sin(angle),
+        lng: coords.lng + (PIN_SPREAD_DEG * Math.cos(angle)) / Math.max(Math.cos(latRad), 0.01),
+      };
+      addMarkerForItem(item, spread);
+    });
+  }
+
   // 마커 선택 시 확대 표시(T12). 상세 시트를 닫으면 selectMarker(closeMapSheet)에서 원래 크기로 복귀.
   function selectMarker(marker) {
     if (selectedMarkerEl) selectedMarkerEl.classList.remove("selected");
@@ -994,7 +1014,7 @@
         const result = await geocodeNominatim(query).catch(() => null);
         if (result) {
           await DB.setGeocode(query, { lat: result.lat, lng: result.lng, manual: false, failed: false, ts: Date.now() });
-          items.forEach((item) => addMarkerForItem(item, result));
+          addMarkersWithSpread(items, result);
         } else {
           await DB.setGeocode(query, { manual: false, failed: true, ts: Date.now() });
         }
@@ -1026,12 +1046,12 @@
     for (const [query, items] of byQuery.entries()) {
       const fixed = GEO_COORDS[query];
       if (fixed) {
-        items.forEach((item) => addMarkerForItem(item, fixed));
+        addMarkersWithSpread(items, fixed);
         continue;
       }
       const cached = await DB.getGeocode(query);
       if (cached && !cached.failed) {
-        items.forEach((item) => addMarkerForItem(item, cached));
+        addMarkersWithSpread(items, cached);
       } else if (cached && cached.failed) {
         pendingItems.push(items[0]);
       } else {
