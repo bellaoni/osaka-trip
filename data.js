@@ -102,6 +102,7 @@ const GEO_COORDS = {
   "The Flying Dinosaur Universal Studios Japan": { lat: 34.66456642354912, lng: 135.43045108673022 },
   "Toyoko Inn Osaka Yodoyabashi-eki Minami": { lat: 34.688367334077256, lng: 135.5021667480469 },
   "Tsurutontan Soemoncho": { lat: 34.66927, lng: 135.505964 },
+  "Unagi no Nakasho Namba": { lat: 34.66737591, lng: 135.5014908 },
   "Umeda": { lat: 34.7034091, lng: 135.4975597 },
   "Universal Studios Japan Main Entrance": { lat: 34.66774913166818, lng: 135.43594121932986 },
   "Universal Studios Japan": { lat: 34.6656393, lng: 135.4324527 },
@@ -150,7 +151,7 @@ const TRIP = {
 const ITEMS = [
   { id: "d1-0", day: 1, time: "08:05", tag: "normal", title: "✈️ 김해공항 → 간사이공항 (7C1351)", desc: "08:05 출발 → 09:35 도착", mapQuery: "Gimhae International Airport", remark: "" },
   { id: "d1-1", day: 1, time: "10:35", tag: "normal", title: "간사이공항 → 난카이난바 (라피트 β56호)", desc: "3호차 23·24번, 10:35→11:12 예약완료", mapQuery: "Kansai Airport Station", remark: "" },
-  { id: "d1-2", day: 1, time: "11:30", tag: "food", title: "점심 (우나기노나카쇼난바점)", desc: "11:30 예약완료", mapQuery: "우나기노나카쇼난바점", remark: "" },
+  { id: "d1-2", day: 1, time: "11:30", tag: "food", title: "점심 (우나기노나카쇼난바점)", desc: "11:30 예약완료", mapQuery: "Unagi no Nakasho Namba", remark: "" },
   { id: "d1-3", day: 1, time: "12:30", tag: "normal", title: "토요코인 오사카 요도야바시 스테이션 미나미", desc: "짐 맡기기", mapQuery: "Toyoko Inn Osaka Yodoyabashi-eki Minami", remark: "" },
   { id: "d1-4", day: 1, time: "13:00", tag: "food", title: "요도야바시/기타하마 카페", desc: "", mapQuery: "Kitahama", remark: "" },
   { id: "d1-5", day: 1, time: "14:30", tag: "normal", title: "숙소 체크인", desc: "", mapQuery: "Toyoko Inn Osaka Yodoyabashi-eki Minami", remark: "" },
